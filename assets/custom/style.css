@@ -26,3 +26,32 @@
   top:-0.14em;
   left:10px;
 }
+
+/*for Demo Only*/
+.demo-row {
+    background-color: rgb(204, 204, 204);
+    opacity: 0.8;
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+  
+  
+  /*Implement*/
+  .sponsor-feature {
+      padding: 20px;
+      min-height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 5px 0;
+  }
+  
+  #id-sponsors .carousel {
+      margin-bottom: 20px;
+  }
+  #id-sponsors .item {
+      padding-bottom: 20px;
+  }
+  #id-sponsors .carousel-indicators {
+      bottom: -75px;
+  }
