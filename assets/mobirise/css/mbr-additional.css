@@ -2554,12 +2554,17 @@ section.lazy-placeholder:after {
   text-align: center;
 }
 .cid-sFFYkFihwd .google-map {
-  height: 25rem;
   position: relative;
+  padding-bottom: 75%; 
+  height: 0;
+  overflow: hidden;
 }
 .cid-sFFYkFihwd .google-map iframe {
-  height: 100%;
-  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
 }
 .cid-sFFYkFihwd .google-map [data-state-details] {
   color: #6b6763;
