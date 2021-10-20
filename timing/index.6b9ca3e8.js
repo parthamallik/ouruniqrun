@@ -571,7 +571,7 @@ var utils = {
     gettiming: function() {
         return new Promise(function(resolve, reject) {
             //make sure the coord is on street
-            fetch('timing/data/runners.csv').then(function(response) {
+            fetch('data/runners.csv').then(function(response) {
                 // Convert to JSON
                 resolve(response.text());
             }).catch(function(e) {
