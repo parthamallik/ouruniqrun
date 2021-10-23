@@ -642,16 +642,22 @@ function csvJSON(csv) {
     }
     return result;
 }
-let getPrediction = (runner)=>{
+let getPrediction = (runner, wantDistance)=>{
     if (runner.TIME && runner.MARK) {
         let sT = Date.parse(`Wed Oct 23 2021 4:30:00 GMT+0530 (India Standard Time)`); // start time
         let eT = Date.parse(`Wed Oct 23 2021 ${runner.TIME}:00 GMT+0530 (India Standard Time)`); // elapsed time
         let d_p = _routeInfoJs.distances[_routeInfoJs.aid_stations[runner.MARK]] / (eT - sT) * (Date.now() - sT); // distance_predicted
         if (d_p > _routeInfoJs.distances[_routeInfoJs.aid_stations[Number(runner.MARK) + 1]]) d_p = _routeInfoJs.distances[_routeInfoJs.aid_stations[Number(runner.MARK) + 1]] * Math.floor(Math.random() * 13 + 85) / 100;
+        if (wantDistance) return d_p;
         return _routeInfoJs.getLatLongFromDistance(d_p); // get lat long for it
-    } else if (runner.MARK) _routeInfoJs.coordinates[_routeInfoJs.aid_stations[runner.MARK]]; // whichever is the last aid station marked
-    else _routeInfoJs.coordinates[0] // no MARK means, not started
-    ;
+    } else if (runner.MARK) {
+        if (wantDistance) return _routeInfoJs.distances[_routeInfoJs.aid_stations[runner.MARK]];
+        _routeInfoJs.coordinates[_routeInfoJs.aid_stations[runner.MARK]]; // whichever is the last aid station marked
+    } else {
+        if (wantDistance) return 0;
+        _routeInfoJs.coordinates[0] // no MARK means, not started
+        ;
+    }
 };
 var markerFeature = [];
 document.getElementById("select").addEventListener("change", (e)=>{
@@ -700,7 +706,8 @@ map.on('click', function(evt) {
         let runner = feature.get('name') ? runners.filter((r)=>r.BIB === feature.get('name')
         ) : null;
         if (runner && runner.length > 0) runner = runner[0];
-        let name = runner.NAME, distance = _routeInfoJs.distances[_routeInfoJs.aid_stations[runner.MARK]] / 1000, exptime = getExpTime(_routeInfoJs.distances[_routeInfoJs.aid_stations[runner.MARK]], runner.TIME);
+        let name = runner.NAME, distance = getPrediction(runner, true) / 1000, exptime = getExpTime(_routeInfoJs.distances[_routeInfoJs.aid_stations[runner.MARK]], runner.TIME);
+        $(element).popover('dispose');
         $(element).popover({
             placement: 'top',
             html: true,
