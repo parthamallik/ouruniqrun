@@ -1,6 +1,106 @@
 (function () {
     'use strict';
-    // function([string1, string2],target id,[color1,color2])    
+    // function([string1, string2],target id,[color1,color2]) 
+    
+    
+    var last_year_data = [   {
+        "SERIAL NO" : "1",
+        "NAME" : "Sridhar Reddy",
+        DURATION : "5:40:43"
+    },
+    {
+        "SERIAL NO" : "2",
+        "NAME" : "Vijay Alluri",
+        DURATION : "5:40:43"
+    },
+    {
+        "SERIAL NO" : "3",
+        "NAME" : "Vijaykumar Panchagatti",
+        DURATION : "6:23:59"
+    },
+    {
+        "SERIAL NO" : "4",
+        "NAME" : "Vijay AM",
+        DURATION : "5:29:29"
+    },
+    {
+        "SERIAL NO" : "5",
+        "NAME" : "Manjunath Reddy",
+        DURATION : "5:08:09"
+    },
+    {
+        "SERIAL NO" : "6",
+        "NAME" : "Sanjay Yadav",
+        DURATION : "6:35:00"
+    },
+    {
+        "SERIAL NO" : "7",
+        "NAME" : "Akshay BE",
+        DURATION : "6:05:24"
+    },
+    {
+        "SERIAL NO" : "8",
+        "NAME" : "Prasad G",
+        DURATION : "DFN"
+    },
+    {
+        "SERIAL NO" : "9",
+        "NAME" : "Biddappa",
+        DURATION : "4:59:38"
+    },
+    {
+        "SERIAL NO" : "10",
+        "NAME" : "Nagraj",
+        DURATION : "DNF"
+    },
+    {
+        "SERIAL NO" : "11",
+        "NAME" : "Ronak Bohara",
+        DURATION : "4:47:13"
+    },
+    {
+        "SERIAL NO" : "12",
+        "NAME" : "Chandrika Roy",
+        DURATION : "6:35:00"
+    },
+    {
+        "SERIAL NO" : "13",
+        "NAME" : "Kavita Nair",
+        DURATION : "4:51:57"
+    },
+{
+        "SERIAL NO" : "14",
+        "NAME" : "Darshan Jain (DJ)",
+        DURATION : "7:40:40"
+    },
+{
+        "SERIAL NO" : "15",
+        "NAME" : "Uttam Shetty",
+        DURATION : "5:39:00"
+    },
+{
+        "SERIAL NO" : "16",
+        "NAME" : "Kiran Nikhil",
+        DURATION : "5:39:26"
+    },
+
+    {
+        "SERIAL NO" : "17",
+        "NAME" : "Ashok S",
+        DURATION : "6:50:00"
+    },
+{
+        "SERIAL NO" : "18",
+        "NAME" : "Bharani",
+        DURATION : "DNF"
+    },
+    {
+        "SERIAL NO" : "19",
+        "NAME" : "Dr.Chiran Babu",
+        DURATION : "6:23:34"
+    },
+
+];
     var runnersData = [
         {
             "NAME": "Karthik Anand",
@@ -448,6 +548,8 @@
       })
     }
     var resultTable = document.querySelector("#results-2");
+    var resultTable_1 = document.querySelector("#results-1");
     addDataToTbody(resultTable, runnersData);
+    addDataToTbody(resultTable_1, last_year_data);
     
 })();
