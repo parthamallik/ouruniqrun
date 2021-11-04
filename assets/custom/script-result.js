@@ -70,14 +70,14 @@
             DURATION: "6:35:00"
         },
         {
+            "SERIAL NO": "12",
+            "NAME": "Chandrika Roy",
+            DURATION: "6:46:32"
+        },
+        {
             "SERIAL NO": "17",
             "NAME": "Ashok S",
             DURATION: "6:50:00"
-        },
-        {
-            "SERIAL NO": "12",
-            "NAME": "Chandrika Roy",
-            DURATION: "7:00:00"
         },
         {
             "SERIAL NO": "14",
