@@ -531,6 +531,7 @@
         'B4202003': 'https://drive.google.com/file/d/1uz4T_ZDbFgX74NPM_bVhc14fv7c-H2rL/view?usp=sharing',
         'B4202002': 'https://drive.google.com/file/d/1besKBUdLcjLG9Pl8-9tRxP5_7gYJV_y8/view?usp=sharing',
         'B4202001': 'https://drive.google.com/file/d/1CsBfSKQHdqD-hWUYEXE2HSAmAaYmyXEo/view?usp=sharing'
+        'B4202023': 'https://drive.google.com/file/d/1hTtKSv0secD8bms97-Be5ZpkZPmUCKhu/view?usp=sharing'
     };
 
     function addDataToTbody(nl, data) { // nl -> NodeList, data -> array with objects
